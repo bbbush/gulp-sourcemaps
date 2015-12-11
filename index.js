@@ -33,7 +33,7 @@ module.exports.init = function init(options) {
       var sourcePath = ''; //root path for the sources in the map
 
       // Try to read inline source map
-      sourceMap = convert.fromSource(fileContent);
+      sourceMap = convert.fromSource(fileContent, options.largeSource);
       if (sourceMap) {
         sourceMap = sourceMap.toObject();
         // sources in map are relative to the source file
